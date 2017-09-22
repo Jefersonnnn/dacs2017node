@@ -1,0 +1,35 @@
+<a href="/users/new/"><button type="button" class="btn btn-primary">Insert new user</button></a>
+<div class="list-group">
+
+    <div class="list-group-item list-group-item-action active">
+        <div class="d-flex flex-row-reverse w-100 justify-content-between">
+            <small>{{countusers}} users</small>
+        </div>
+        <div class="col">login</div>
+        <div class="col">Nome</div>
+        <div class="col">E-mail</div>
+        <div class="col">Opções</div>
+    </div>
+
+    {{#each data}}
+        <div class="list-group-item list-group-item-action list-group-item-primary">
+
+            <div class="col">
+                {{name}}
+            </div>
+
+            <div class="col">
+                {{login}}
+            </div>
+
+            <div class="col">
+                {{email}}
+            </div>
+
+            <div class="col">
+                <a href="/users/edit/{{iduser}}">Edit</a>
+                <a href="/users/delete/{{iduser}}">Remove</a>
+            </div>
+        </div>
+    {{/each}}
+</div>
